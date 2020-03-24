@@ -292,3 +292,24 @@ button:focus{
     .doctor-p { font-size: 14px; }
     .space { margin: 35px 0; }   
 }
+
+/************************* video samples ***************************/
+.video-carousel-item.carousel-item {
+    padding: 0px 30px;
+}
+.lecture-samples-title{ margin-bottom: 0; }
+
+@media(max-width: 768px){
+    .video-carousel-item.carousel-item {
+        padding: 0px 20px;
+    }
+}
+@media(max-width: 576px){
+    .lecture-video-div embed{
+        box-shadow: 0px 2px 9px 7px #a29f9f66;
+    }
+}
+@media(max-width: 450px){
+    .video-carousel-item.carousel-item { padding: 0px 10px; }
+    .lecture-video-div embed{ box-shadow: 0px 2px 10px 4px #a29f9f66; }
+}
