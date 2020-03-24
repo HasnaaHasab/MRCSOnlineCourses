@@ -1,0 +1,294 @@
+/* Segoe font */
+@font-face {
+font-family: 'Segoe UI Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Italic'), url('Segoe UI Italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Bold Italic'), url('Segoe UI Bold Italic.woff') format('woff');
+}
+:root{
+    --red: #d86160;
+    --white: #ffffff;
+    --grey: #9a9a9a;
+    --grey-1: #505050;
+    --grey-2: #3a3a3a;
+    --orang: #fecaca;
+    --dark-orang: #f59081;
+    --white-orang: #ffeae9;
+    --yellow: #fed345;
+    --green: #58bc55;
+    --blue: #3e63bb;
+    --baby-blue: #49bcff;
+    --foshia: #fc4d84;
+    --orang-btn: #fcb795;
+}
+
+/**************** public style ***************/
+*{
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: 0;
+}
+body{
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+}
+.section{
+    padding: 40px 0;
+}
+.div-title{
+    color: var(--grey-1);
+    font-size: 30px;
+}
+.div-p{
+    color: var(--grey);
+}
+.space{
+    margin: 75px 0;
+}
+button:focus{ 
+    outline: 0;
+    border-style: none;
+}
+.navbar-light .navbar-toggler{
+    border-style: none;
+}
+.navbar-light .navbar-toggler:focus, .navbar-light .navbar-toggler:hover{
+    outline: 0;
+    cursor: pointer;
+}
+#second-number{ display: none; }
+.lecture-sample-icon i{
+    color: var( --dark-orang) !important;
+    font-size: 18px;
+    margin-right: 10px;
+}
+/*********** sticky navbar ************/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: -1px 8px 30px -7px #a29f9f4d;
+    background-color: white;
+    z-index: 1;
+
+    opacity:0.95;  
+    animation:slide-down 0.7s;
+}
+.sticky + .home-section {
+    padding-top: 100px;
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
+}
+.instructor-img{
+    display: none;
+}
+
+/*************************** media query *********************/
+
+/*********** navbar & discount alert *****************/
+
+@media (max-width: 992px) {
+    .discount-alert{
+        display: none;
+    }
+    .navbar-div{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background-color: white;    
+    }
+    .home-section{
+        padding-top: 100px;
+    }
+    .navbar-collapse.collapse.show .navbar
+    {
+        box-shadow: -1px 8px 18px 3px #a29f9f4d;
+    }
+    #nav-login-btn{
+        width: -moz-max-content;
+    }
+    .navbar .navbar-nav .nav-link.active::after{display: none; }
+}
+
+/******************* home section **************************/
+@media (max-width: 992px) {
+    .quick-review-title{
+        font-size: 35px !important;
+    }
+    .quick-review-p{
+        font-size: 18px !important;
+    }
+    .img-side img {
+        margin: 20% 0;
+    }
+}
+@media (max-width: 768px){
+    .quick-review-side{
+        margin: 20px 0;
+    }
+    .img-side img {
+        margin: 5px 0;
+    }
+}
+@media (max-width: 567px){
+    .home-section {
+        padding: 83px 30px;
+    }
+    .quick-review-title { font-size: 30px !important;}
+    .quick-review-p { font-size: 16px !important; }
+    .theme-btn{font-size: 16px;}
+}
+@media (max-width: 470px){
+    .quick-review-p{ width: 100%; }
+
+}
+/********************* about instructor *******************/
+@media (max-width: 1200px){
+    .doctor-section{
+        /* padding: 50px 40px; */
+        padding: 50px 40px 10px;
+    }
+}
+@media (max-width: 992px){
+    .doctor-img {  width: 100%;}
+    .doctor-name{ font-size: 21px; }
+    .doctor-p{font-size: 16px;}
+}
+@media (max-width: 768px){
+    .div-title{font-size: 25px;}
+    .doctor-section { padding: 50px 0;}
+}
+@media (max-width: 576px ){
+    .instructor-img{
+        display: inline-block;
+        transition: .4s ease-in-out;
+    }
+    .doctor-img{ display: none; }
+    .doctor-section { 
+        padding: 20px 0; 
+        text-align: center;
+    }
+    .doctor-name { font-size: 18px; }
+    .instructor-img{ width: 13%; }
+    .doctor-p { font-size: 15px; }
+
+    .home-top-space{padding-top: 83px !important;}
+    .home-section{ padding: 35px 30px; }
+    .doctor-section{ padding: 10px 0; }
+
+    .div-title { font-size: 23px; }
+
+}
+
+/********************** our popular course ************************/
+@media (max-width: 767px ){
+    .about-course-img img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+}
+@media(max-width: 576px){
+    .space { margin: 45px 0; }  
+    
+    .section-p { font-size: 16px; }
+    .section-title { font-size: 23px; }
+
+}
+
+/********************* course content ****************************/
+@media(max-width: 1200px){
+    .course-name { font-size: 45px; }
+    .course-number { font-size: 125px; }
+    .number-box{ display: none; }
+}
+@media (max-width: 992px){
+    .course-name { font-size: 35px; }
+    .course-number { font-size: 100px; }
+}
+@media (max-width: 768px ){
+    #fist-number{ display: none; }
+    #second-number{ display: inline; }
+    .course-title-div{ margin-bottom: 20px; }
+    .basics-course-div, .revision-course-div { margin-bottom: 80px; }
+
+    .study-notes-section p{ font-size: 25px; }
+}
+@media (max-width: 576px){
+    .lecture-samples-title{ margin-bottom: 0; }
+    .course-content-list{ font-size: 14px; }
+    .course-name { font-size: 30px; }
+    .course-number { font-size: 75px; }
+    .study-notes-section p{ font-size: 20px; }
+}
+
+/******************* reviews section *****************************/
+@media (max-width: 768px){
+    .reviews-photos-div{ margin-top: 20px; }
+    .ready-section .ready-p{ font-size: 23px; }
+    .ready-btn-div{ margin-top: 20px; }
+}
+@media (max-width: 576px){
+    .ready-section .ready-p{ font-size: 20px; }
+}
+@media (max-width: 430px){
+    .ready-section .ready-p, .study-notes-section p { font-size: 18px; }
+}
+/***************** contact section *******************************/
+@media(max-width: 992px){
+    .whatsapp-box{ margin-bottom: 15px; }
+    .social-link-contant p, .social-link-contant a{
+        font-size: 13px;
+    }
+    .whatsapp-icon, .telegram-icon, .facebook-icon{ font-size: 30px; }
+    .contacts-div{ padding: 0; }
+    .contact-img-div{ padding: 5% 0; }
+}
+@media (max-width: 768px){
+    .contact-img-div { padding: 0; }
+    .contacts-div{ margin-top: 20px; }
+}
+/********************** footer section ***************************/
+@media(max-width: 576px){
+    .site-footer p { font-size: 16px; }
+}
+/********************** popular classes **************************/
+@media (max-width: 435px){
+    .div-title { font-size: 19px; }
+    .doctor-name { font-size: 16px; }
+    .doctor-p { font-size: 14px; }
+    .space { margin: 35px 0; }   
+}
